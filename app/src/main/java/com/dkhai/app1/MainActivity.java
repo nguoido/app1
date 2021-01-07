@@ -91,7 +91,9 @@ public class MainActivity extends AppCompatActivity {
             // Bring user to the market or let them choose an app?
             Log.d("dkhai","null packageName");
         }
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.putExtra("qString", "ok");
         context.startActivity(intent);
     }
 
